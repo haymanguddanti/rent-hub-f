@@ -1,0 +1,287 @@
+<div class="pageContainer">
+  <form class="featuredListing" [formGroup]="listingForm">
+    <div class="featuredListingHeading">
+      <input
+        type="text"
+        class="h1 bold dalla"
+        placeholder="{{ titlePlaceHolder }}"
+        formControlName="ListingTitle"
+        [class.redBorder]="
+          listingForm.get('ListingTitle')?.invalid &&
+          listingForm.get('ListingTitle')?.touched
+        "
+      />
+      <div class="button primary bold" (click)="onPublish()">Publish</div>
+    </div>
+    <div class="featuredListingBody">
+      <label style="grid-area: a" [class.redBorder]="url1 === undefined">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="72"
+          height="72"
+          *ngIf="url1 === undefined"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+              stroke="var(--secondary)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <div *ngIf="url1 === undefined" class="h5">Add upto 4 images</div>
+        <input
+          type="file"
+          name="pic1"
+          (change)="onFileChanged($event, 1)"
+          *ngIf="url1 === undefined"
+        />
+        <img src="{{ url1 }}" />
+      </label>
+      <label style="grid-area: b">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="72"
+          height="72"
+          *ngIf="url2 === undefined"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+              stroke="var(--secondary)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <input
+          type="file"
+          name="pic2"
+          (change)="onFileChanged($event, 2)"
+          *ngIf="url2 === undefined"
+        />
+        <img src="{{ url2 }}" />
+      </label>
+      <label style="grid-area: c">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="72"
+          height="72"
+          *ngIf="url3 === undefined"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+              stroke="var(--secondary)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <input type="file" name="pic3" (change)="onFileChanged($event, 3)" />
+        <img src="{{ url3 }}" />
+      </label>
+      <label style="grid-area: d">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="72"
+          height="72"
+          *ngIf="url4 === undefined"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+              stroke="var(--secondary)"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+        <input type="file" name="pic4" (change)="onFileChanged($event, 4)" />
+        <img src="{{ url4 }}" />
+      </label>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="h3 dalla">Description</div>
+    <div class="descriptionContainer">
+      <div class="facilityListContainer">
+        <input
+          class="h5"
+          type="text"
+          formControlName="ListingDescription"
+          [class.redBorder]="
+            listingForm.get('ListingDescription')?.invalid &&
+            listingForm.get('ListingDescription')?.touched
+          "
+        />
+        <div></div>
+        <div></div>
+        <div class="h3 dalla">Location</div>
+        <input
+          type="text"
+          formControlName="ListingLocation"
+          [class.redBorder]="
+            listingForm.get('ListingLocation')?.invalid &&
+            listingForm.get('ListingLocation')?.touched
+          "
+        />
+        <div></div>
+        <div class="h3 dalla">Facilities</div>
+        <span class="facilityList">
+          <div
+            class="dropdownContainer h6 dalla facActive"
+            tabindex="0"
+            [class.redBorder]="furnishing === 'Furnishing'"
+          >
+            <div>{{ furnishing === "" ? "Furnishing" : furnishing }}</div>
+            <div class="dropdownOptions">
+              <div (click)="modifyFurnishing('Unfurnished')">Unfurnished</div>
+              <div (click)="modifyFurnishing('Semi Furnished')">
+                Semi Furnished
+              </div>
+              <div (click)="modifyFurnishing('Fully Furnished')">
+                Fully Furnished
+              </div>
+            </div>
+          </div>
+          <span>
+            <input type="checkbox" formControlName="sharedSpace" />
+            Is shared space</span
+          >
+          <span>
+            <input type="checkbox" formControlName="gym" />
+            Gym/Fitness Center</span
+          >
+          <span
+            ><input type="checkbox" formControlName="PowerBackup" />Power
+            Backup</span
+          >
+          <span
+            ><input
+              type="checkbox"
+              formControlName="PlantSecuritySystem"
+            />Plant Security System</span
+          >
+          <span>
+            <input type="checkbox" formControlName="SwimmingPool" />Swimming
+            Pool
+          </span>
+          <span>
+            <input type="checkbox" formControlName="GarbageDisposal" />Garbage
+            Disposal
+          </span>
+          <span>
+            <input type="checkbox" formControlName="LaundryService" />Laundry
+            Service
+          </span>
+          <span>
+            <input type="checkbox" formControlName="CarPark" />Car Park
+          </span>
+          <span>
+            <input type="checkbox" formControlName="PrivateLawn" />Private Lawn
+          </span>
+          <span>
+            <input type="checkbox" formControlName="Elevator" />Elevator
+          </span>
+          <span>
+            <input type="checkbox" formControlName="VisitorsParking" />Visitors
+            Parking
+          </span>
+          <span>
+            <input type="checkbox" formControlName="WaterHeater" />Water Heater
+          </span>
+          <span>
+            <input type="checkbox" formControlName="ClubHouse" />Club House
+          </span>
+        </span>
+      </div>
+      <div>
+        <div>
+          <div class="h6 dalla">Rent ₹/month</div>
+          <input
+            class="h4"
+            type="number"
+            formControlName="ListingRent"
+            [class.redBorder]="
+              listingForm.get('ListingRent')?.invalid &&
+              listingForm.get('ListingRent')?.touched
+            "
+          />
+        </div>
+        <div>
+          <div class="h6 dalla">Deposit ₹</div>
+          <input
+            class="h4"
+            type="number"
+            formControlName="ListingDeposit"
+            [class.redBorder]="
+              listingForm.get('ListingDeposit')?.invalid &&
+              listingForm.get('ListingDeposit')?.touched
+            "
+          />
+        </div>
+        <div>
+          <div class="h6 dalla">Area sqft</div>
+          <input
+            class="h4"
+            type="number"
+            formControlName="ListingSpace"
+            [class.redBorder]="
+              listingForm.get('ListingSpace')?.invalid &&
+              listingForm.get('ListingSpace')?.touched
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <div class="commentsContainer" *ngIf="listing.comments.length > 0">
+    <div class="h3 dalla">Comments</div>
+    <div class="comments" *ngFor="let comment of listing.comments">
+      <div>{{ comment.user }}</div>
+      <div class="h6">
+        {{ comment.comment }}
+      </div>
+    </div>
+  </div> -->

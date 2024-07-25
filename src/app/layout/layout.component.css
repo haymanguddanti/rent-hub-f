@@ -1,0 +1,14 @@
+header {
+    background: var(--primary50);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content max-content;
+    gap: 24px;
+    padding: 12px 5%;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 10;
+}

@@ -1,0 +1,141 @@
+.featuredListing {
+  display: grid;
+  gap: 24px;
+}
+
+.featuredListingHeading {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.featuredListingBody1,
+.featuredListingBody2,
+.featuredListingBody3,
+.featuredListingBody4 {
+  display: grid;
+  gap: 24px;
+  height: 500px;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-areas:
+    "a b c"
+    "a b d";
+}
+
+.featuredListingBody2 {
+  grid-template-areas:
+    "a a b"
+    "a a b";
+}
+
+.featuredListingBody3 {
+  grid-template-areas:
+    "a b c"
+    "a b c";
+}
+
+.featuredListingBody1 {
+  grid-template-areas:
+    "a a a"
+    "a a a";
+}
+
+.featuredListingBody > * {
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.featuredListingBody > *:nth-child(1) {
+  grid-area: a;
+}
+
+.featuredListingBody > *:nth-child(2) {
+  grid-area: b;
+}
+
+.featuredListingBody > *:nth-child(3) {
+  grid-area: c;
+}
+
+.featuredListingBody > *:nth-child(4) {
+  grid-area: d;
+}
+
+.cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--grey60);
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.allListing {
+  display: grid;
+  gap: 24px;
+}
+
+.allListingList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.allListingList > * {
+  /* height: max-content; */
+  display: grid;
+  gap: 12px;
+  grid-template-rows: max-content max-content 1fr 34px;
+  /* align-content: baseline; */
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.allListingList > * > * {
+  margin: 0px 12px;
+}
+
+.allListingList > * > img {
+  margin: 0px;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.allListingList .button {
+  align-content: flex-end;
+  height: 18px;
+}
+
+.allListingCard > .smallIcon {
+  position: absolute;
+  right: 0px;
+  top: 12px;
+}
+
+.allListingHeader {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+}
+
+.allListingHeaderRight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.allListingHeaderRight {
+  display: grid;
+  gap: 18px;
+}

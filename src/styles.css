@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+:root {
+  --primary: #47d7ac;
+  --secondary: #13294b;
+  --text: #13294b;
+  --white: #fefefe;
+  --grey: #f4f4f4;
+  --red: #bf4059;
+  --primary50: rgba(19, 41, 75, 0.2);
+  --grey60: rgba(244, 244, 244, 0.6);
+}
+
+html {
+  font-family: "Varela Round", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: Redaction;
+  src: url(./app/assets/chillax/Chillax-Medium.woff2);
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary50);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  all: unset;
+  border: 1px solid var(--primary);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="text"].dalla,
+input[type="password"].dalla {
+  font-family: Redaction;
+}
+
+input[type="text"].h1,
+input[type="password"].h1,
+.h1 {
+  font-size: 60px;
+  line-height: 72px;
+  color: var(--secondary);
+}
+
+input[type="text"].h2,
+input[type="password"].h2,
+.h2 {
+  font-size: 48px;
+  line-height: 52px;
+}
+
+input[type="text"].h3,
+input[type="password"].h3,
+.h3 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+input[type="text"].h4,
+input[type="password"].h4,
+.h4 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+input[type="text"].h5,
+input[type="password"].h5,
+.h5 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+input[type="text"].h6,
+input[type="password"].h6,
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button,
+button {
+  all: unset;
+  padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.dalla {
+  font-family: Redaction;
+}
+
+.button.primary,
+button.primary {
+  background-color: var(--primary);
+}
+
+.button.secondary,
+button.secondary {
+  background-color: var(--grey);
+}
+
+.button:hover,
+button:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.button.secondary:hover,
+button.secondary:hover,
+.smallIcon:hover {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.smallIcon {
+  padding: 12px;
+  background-color: var(--grey);
+  border-radius: 50%;
+  height: 48px;
+  cursor: pointer;
+}
+
+.inputContainer {
+  display: grid;
+  gap: 4px;
+}
+
+.dropdownContainer {
+  display: grid;
+  place-items: center;
+  height: 36px;
+  padding: 0px 24px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  position: relative;
+}
+
+.dropdownOptions {
+  max-height: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 40px;
+  padding: 0px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  display: grid;
+  gap: 2px;
+  background-color: #faeee6;
+  /* font-family: initial; */
+  transition: all 0.4s;
+  width: 100%;
+  z-index: 1;
+  left: 0px;
+}
+
+.dropdownOptions > * {
+  padding: 4px 12px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdownOptions > *:hover {
+  background-color: var(--primary);
+}
+
+.dropdownContainer:focus .dropdownOptions {
+  padding: 12px 0px;
+  max-height: 600px;
+  border: 1px solid var(--primary);
+}
+
+.pageContainer {
+  padding: 82px 5% 36px 5%;
+  display: grid;
+  gap: 24px;
+}
+
+.priceOptions > *:nth-child(6) {
+  display: none;
+}
+
+.text-danger {
+  color: var(--red);
+}
+
+.redBorder {
+  border: 2px solid var(--red) !important;
+  border-radius: 12px !important;
+}
+
+.smallIcon.active {
+  background-color: var(--primary);
+}
+
+.redBorder::placeholder {
+  content: "This is a required feild";
+}
