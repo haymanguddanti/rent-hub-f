@@ -7,3 +7,8 @@ json-server deployed on [https://rent-hub.vercel.app](https://rent-hub-one.verce
 Git-hub link [https://github.com/haymanguddanti/rent-hub-f/](https://github.com/haymanguddanti/rent-hub-f/)
 
 Application is deployed in Vercel
+
+Credentials
+
+Email: test@email.com
+Password: password
