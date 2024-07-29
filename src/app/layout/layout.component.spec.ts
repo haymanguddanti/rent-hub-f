@@ -20,4 +20,9 @@ describe('LayoutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('check logout', () => {
+    component.logout();
+    expect(localStorage.getItem('user')).toBe(null);
+  });
 });
