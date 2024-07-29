@@ -8,7 +8,7 @@ Git-hub link [https://github.com/haymanguddanti/rent-hub-f/](https://github.com/
 
 Application is deployed in Vercel
 
-Credentials
+## Credentials
 
 Email: test@email.com
 
